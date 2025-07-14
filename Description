@@ -1,0 +1,9 @@
+QR Code Encryption using LU Decomposition and PCA
+
+This project aims to enhance the security of QR codes by implementing a multi-layer encryption technique that leverages mathematical methods such as LU Decomposition and Principal Component Analysis (PCA). QR codes, being widely used for data storage and transmission, are susceptible to unauthorized access and tampering. To address these vulnerabilities, the project proposes a robust encryption-decryption pipeline grounded in linear algebra and statistical analysis.
+
+The encryption process begins by extracting the encoded data from the QR code and converting it into a square matrix format. LU Decomposition is then applied to decompose this matrix into its lower and upper triangular components, which helps to obscure the original structure of the data. PCA is subsequently employed to project the data onto a set of principal components, effectively transforming and compressing the information in a way that adds another layer of security.
+
+After transformation, the encrypted data is reconstructed into a QR code using Python libraries such as pyzbar and qrcode. The decryption process involves reversing the PCA transformation and LU reconstruction steps, followed by XOR-based decoding to retrieve the original data accurately.
+
+This approach not only ensures data confidentiality but also maintains the integrity of the information during transmission. The use of LU Decomposition aids in structural transformation, while PCA helps in dimensionality reduction and obfuscation. The final encrypted QR code is resistant to standard decoding methods, thereby reinforcing the overall security of QR code applications in fields such as authentication, secure messaging, and digital transactions.
